@@ -1,4 +1,4 @@
-package com.example.samuel.SAMUEL.domain.user.controllers;
+package com.example.samuel.SAMUEL.domain.controllers;
 
 import com.example.samuel.SAMUEL.model.Tasks;
 import com.example.samuel.SAMUEL.service.TasksService;

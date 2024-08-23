@@ -1,4 +1,4 @@
-package com.example.samuel.SAMUEL.domain.user;
+package com.example.samuel.SAMUEL.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

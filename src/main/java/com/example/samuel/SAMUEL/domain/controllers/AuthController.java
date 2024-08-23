@@ -1,10 +1,10 @@
-package com.example.samuel.SAMUEL.domain.user.controllers;
+package com.example.samuel.SAMUEL.domain.controllers;
 
-import com.example.samuel.SAMUEL.domain.user.User;
+import com.example.samuel.SAMUEL.domain.User;
 import com.example.samuel.SAMUEL.dto.LoginRequestDTO;
 import com.example.samuel.SAMUEL.dto.RegisterRequestDTO;
 import com.example.samuel.SAMUEL.dto.ResponseDTO;
-import com.example.samuel.SAMUEL.infra.security.TokenService;
+import com.example.samuel.SAMUEL.security.TokenService;
 import com.example.samuel.SAMUEL.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
