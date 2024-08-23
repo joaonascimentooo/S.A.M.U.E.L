@@ -1,7 +1,6 @@
-package com.example.samuel.SAMUEL.domain.user.controllers;
+package com.example.samuel.SAMUEL.domain.controllers;
 
-import com.example.samuel.SAMUEL.domain.user.User;
-import com.example.samuel.SAMUEL.model.Tasks;
+import com.example.samuel.SAMUEL.domain.User;
 import com.example.samuel.SAMUEL.repositories.UserRepository;
 import com.example.samuel.SAMUEL.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.example.samuel.SAMUEL.infra.security;
+package com.example.samuel.SAMUEL.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

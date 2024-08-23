@@ -1,13 +1,11 @@
 package com.example.samuel.SAMUEL.model;
 
-import com.example.samuel.SAMUEL.domain.user.User;
+import com.example.samuel.SAMUEL.domain.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.UUID;
 
 @Entity
 @Table(name = "tarefas")

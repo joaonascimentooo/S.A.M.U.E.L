@@ -1,6 +1,6 @@
-package com.example.samuel.SAMUEL.infra.security;
+package com.example.samuel.SAMUEL.security;
 
-import com.example.samuel.SAMUEL.domain.user.User;
+import com.example.samuel.SAMUEL.domain.User;
 import com.example.samuel.SAMUEL.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
