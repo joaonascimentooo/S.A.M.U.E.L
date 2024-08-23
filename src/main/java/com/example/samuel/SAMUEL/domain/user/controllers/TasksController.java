@@ -33,6 +33,11 @@ public class TasksController {
         Tasks uptadedTask = tasksService.updateTasks(id, taskDetails);
         return new ResponseEntity<>(uptadedTask,HttpStatus.OK);
     }
+    @PutMapping("/{tasksId}/assign/{userId}")
+    public Tasks assignTaskToUser(@PathVariable String tasksId, @PathVariable String userId) {
+        return tasksService.TaskToUser(tasksId, userId);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTask(@PathVariable String id){
         tasksService.deleteTask(id);

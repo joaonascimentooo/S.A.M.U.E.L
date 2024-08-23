@@ -1,5 +1,6 @@
 package com.example.samuel.SAMUEL.model;
 
+import com.example.samuel.SAMUEL.domain.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,4 +24,8 @@ public class Tasks {
     private String title;
     private String description;
     private  boolean completed;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User assignedUser;
 }

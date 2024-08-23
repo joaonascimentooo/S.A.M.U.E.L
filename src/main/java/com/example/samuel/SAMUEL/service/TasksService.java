@@ -1,19 +1,25 @@
 package com.example.samuel.SAMUEL.service;
 
+import com.example.samuel.SAMUEL.domain.user.User;
 import com.example.samuel.SAMUEL.exceptions.ResourceNotFoundException;
 import com.example.samuel.SAMUEL.model.Tasks;
 import com.example.samuel.SAMUEL.repositories.TasksRepository;
+import com.example.samuel.SAMUEL.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TasksService {
 
     @Autowired
     private TasksRepository tasksRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
     public Tasks createTasks(Tasks tasks){
         return tasksRepository.save(tasks);
@@ -36,6 +42,20 @@ public class TasksService {
         Tasks tasks = getTaskById(id);
         tasksRepository.delete(tasks);
     }
+    public Tasks TaskToUser(String tasksId, String userId){
+        Optional<Tasks> tasksOptional = tasksRepository.findById(tasksId);
+        Optional<User> userOptional = userRepository.findById(userId);
 
+        if (tasksOptional.isPresent() && userOptional.isPresent()){
+            Tasks tasks = tasksOptional.get();
+            User user = userOptional.get();
+            tasks.setAssignedUser(user);
+
+            return tasksRepository.save(tasks);
+        }else {
+            throw new RuntimeException("Task or User Not Found");
+        }
+
+    }
 
 }
