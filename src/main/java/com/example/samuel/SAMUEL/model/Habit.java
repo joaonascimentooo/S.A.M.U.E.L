@@ -23,5 +23,4 @@ public class Habit {
     private String description;
 
     private Boolean completed;
-
 }
