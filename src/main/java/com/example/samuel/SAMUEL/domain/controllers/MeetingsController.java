@@ -27,11 +27,14 @@ public class MeetingsController {
         Meetings createdMeeting = meetingService.createMeetings(meetings);
         return new ResponseEntity<>(createdMeeting, HttpStatus.CREATED);
     }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Meetings> updateMeetings(@PathVariable String id, @RequestBody Meetings meetingsDetails){
-        Meetings updateMeeting = meetingService.updateMeetings(id, meetingsDetails);
-        return new ResponseEntity<>(updateMeeting, HttpStatus.OK);
+   @PutMapping("/{id}")
+   public ResponseEntity<Meetings> updateTask(@PathVariable String id, @RequestBody Meetings meetingsDetails){
+        Meetings uptadedMeeting = meetingService.updateMeetings(id, meetingsDetails);
+        return new ResponseEntity<>(uptadedMeeting, HttpStatus.OK);
+   }
+    @PutMapping("/{meetingId}/assign/{userId}")
+    public Meetings assignMeetingToUser(@PathVariable String meetingId, @PathVariable String userId){
+        return meetingService.MeetingToUser(meetingId, userId);
     }
 
     @DeleteMapping("/{id}")

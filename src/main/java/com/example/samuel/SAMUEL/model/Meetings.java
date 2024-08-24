@@ -1,5 +1,6 @@
 package com.example.samuel.SAMUEL.model;
 
+import com.example.samuel.SAMUEL.domain.User;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -29,6 +30,8 @@ public class Meetings {
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime DateMeeting;
 
-
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User assignedUser;
 
 }
